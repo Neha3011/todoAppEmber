@@ -1,0 +1,8 @@
+
+{{input-todo onAdd=(action 'addTodo')}}
+<ul>
+  {{#each todos as |todo|}}
+      <li>{{ todo.text }}</li>
+      <span><a {{action 'deleteTodo' todo}}> Remove </a></span>
+  {{/each}}
+</ul>
